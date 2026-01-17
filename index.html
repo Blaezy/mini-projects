@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Redirect website</title>
+    <style>
+      body{
+        text-align: center;
+      }
+      button{
+        padding: 10px 30px;
+        font-weight: bold;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Click below button to redirect</h1>
+    <button class="js-redirect-button">Click here</button>
+
+    <script>
+      const buttonElement = document.querySelector(".js-redirect-button");
+
+      
+      buttonElement.addEventListener("click", () => {
+        window.open('project-1/index.html','_blank');
+      });
+    </script>
+  </body>
+</html>
