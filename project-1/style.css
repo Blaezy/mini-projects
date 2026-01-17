@@ -1,0 +1,73 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+}
+
+.profile-img{
+  width: 50px;
+  border-radius: 50%;
+  display: block;
+}
+
+.navbar-container{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 30px 100px;
+}
+
+.navbar-section1, .navbar-section2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.navbar-section1{
+  gap: 15px;
+}
+
+.title-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 100px;
+}
+
+.title-text{
+  font-size: 40px;
+  font-weight: 600;
+}
+.title-desc{
+  font-size: 16px;
+  font-weight: 500;
+  color: grey;
+}
+
+.middle-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 100px;
+}
+
+.middle-first-section{
+  width: 25%;
+  padding-right: 50px;
+} 
+.middle-second-section{
+  width: 40%;
+  padding: 0px 50px;
+}
+.middle-third-section {
+  width: 35%;
+  padding-left: 50px;
+}
+
+.middle-title{
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0;
+}
