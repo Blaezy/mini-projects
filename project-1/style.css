@@ -71,3 +71,23 @@
   font-weight: 600;
   padding: 10px 0;
 }
+.project-list{
+  line-height: 2;
+}
+
+.work{
+  padding: 15px 0;
+}
+
+.work-info{
+  padding: 8px 0;
+}
+
+.courses-list{
+  margin: 10px;
+}
+
+.course-i-took{
+  padding: 8px 0;
+  font-weight: 500;
+}
