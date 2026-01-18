@@ -185,7 +185,9 @@ footer{
 
   .navbar-section2{
     font-size: 16px;
-    gap: 25px;
+    gap: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .title-text{
@@ -197,6 +199,10 @@ footer{
   .middle-second-section,.middle-third-section{
     width: 80%;
     padding: 0px 0px 0px 40px;
+  }
+  .review-title{
+    margin: 0;
+    text-align: center;
   }
 
 }
