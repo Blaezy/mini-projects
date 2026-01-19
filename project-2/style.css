@@ -1,9 +1,41 @@
+* {
+  margin: 0;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.timeline-container{
-  padding: 50px;
+.changelog {
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 50px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title-text {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.title-desc {
+  color: gray;
+}
+
+.timeline-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .timeline-row {
@@ -11,13 +43,17 @@ body {
   gap: 20px;
 }
 
-.timeline-date{
+.timeline-date {
   text-align: right;
   width: 150px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: gray;
 }
 .timeline-desc {
-  /* padding: 50px 0px 0px 10px; */
   width: 500px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .div-line {
@@ -34,5 +70,21 @@ body {
   background-color: black;
   border-radius: 50%;
   left: -9.5px;
-  /* top: 50px; */
+  top: 30px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-container button {
+  background-color: black;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 14px;
+  font-size: 17px;
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
