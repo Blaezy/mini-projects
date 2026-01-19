@@ -1,36 +1,38 @@
-.div-line{
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.timeline-container{
+  padding: 50px;
+}
+
+.timeline-row {
+  display: flex;
+  gap: 20px;
+}
+
+.timeline-date{
+  text-align: right;
+  width: 150px;
+}
+.timeline-desc {
+  /* padding: 50px 0px 0px 10px; */
+  width: 500px;
+}
+
+.div-line {
   width: 0;
   position: relative;
-  height: 800px;
+  height: auto;
   border-left: solid 3px black;
-  left: 300px;
 }
 
-.div-dot{
+.div-dot {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   background-color: black;
   border-radius: 50%;
-  left: -11px;
-  top: 100px;
-}
-
-.div-line :nth-child(1){
-  top: 200px;
-}
-.div-line :nth-child(2){
-  top: 300px;
-}
-.div-line :nth-child(3){
-  top: 400px;
-}
-.div-line :nth-child(4){
-  top: 500px;
-}
-.div-line :nth-child(5){
-  top: 600px;
-}
-.div-line :nth-child(6){
-  top: 700px;
+  left: -9.5px;
+  /* top: 50px; */
 }
