@@ -1,4 +1,36 @@
-.div-container{
-  height: 300px;
-  border-left: solid 2px black;
+.div-line{
+  width: 0;
+  position: relative;
+  height: 800px;
+  border-left: solid 3px black;
+  left: 300px;
+}
+
+.div-dot{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  left: -11px;
+  top: 100px;
+}
+
+.div-line :nth-child(1){
+  top: 200px;
+}
+.div-line :nth-child(2){
+  top: 300px;
+}
+.div-line :nth-child(3){
+  top: 400px;
+}
+.div-line :nth-child(4){
+  top: 500px;
+}
+.div-line :nth-child(5){
+  top: 600px;
+}
+.div-line :nth-child(6){
+  top: 700px;
 }
