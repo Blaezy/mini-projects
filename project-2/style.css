@@ -9,14 +9,11 @@ body {
 .changelog {
   border: 3px solid black;
   border-radius: 20px;
-  margin: 50px;
+  margin: 50px auto;
+  width: 700px;
 }
 
 .title-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -25,22 +22,35 @@ body {
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;
+  text-align: center;
 }
 .title-desc {
   color: gray;
+  text-align: center;
 }
 
 .timeline-container {
   width: 100%;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  left: 180px; /* date width + gap */
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: black;
 }
 
 .timeline-row {
   display: flex;
   gap: 20px;
+  position: relative;
 }
 
 .timeline-date {
@@ -49,18 +59,11 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
   color: gray;
+  padding-left: 15px;
 }
 .timeline-desc {
   width: 500px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.div-line {
-  width: 0;
-  position: relative;
-  height: auto;
-  border-left: solid 3px black;
+  padding: 30px 20px;
 }
 
 .div-dot {
@@ -69,7 +72,7 @@ body {
   height: 17px;
   background-color: black;
   border-radius: 50%;
-  left: -9.5px;
+  left: 173px;
   top: 30px;
 }
 
@@ -83,7 +86,7 @@ body {
   color: white;
   padding: 15px 30px;
   border: none;
-  border-radius: 14px;
+  border-radius: 12px;
   font-size: 17px;
   margin-bottom: 50px;
   margin-top: 20px;
