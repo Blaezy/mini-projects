@@ -3,26 +3,33 @@
   <head>
     <title>Redirect website</title>
     <style>
-      body{
+      body {
         text-align: center;
       }
-      button{
+      button {
         padding: 10px 30px;
         font-weight: bold;
-
       }
     </style>
   </head>
   <body>
-    <h1>Click below button to redirect</h1>
-    <button class="js-redirect-button">Click here</button>
+    <h1>Click the button to redirect to Project-1</h1>
+    <button class="js-redirect-button-project-1">Project-1</button>
+
+    <h1>Click the button to redirect to Project-2</h1>
+    <button class="js-redirect-button-project-2">Project-2</button>
 
     <script>
-      const buttonElement = document.querySelector(".js-redirect-button");
+      const buttonElementProject1 = document.querySelector(".js-redirect-button-project-1");
 
-      
-      buttonElement.addEventListener("click", () => {
-        window.open('project-1/index.html','_blank');
+      buttonElementProject1.addEventListener("click", () => {
+        window.open("project-1/index.html");
+      });
+
+      const buttonElementProject2 = document.querySelector(".js-redirect-button-project-2");
+
+      buttonElementProject2.addEventListener("click", () => {
+        window.open("project-2/index.html");
       });
     </script>
   </body>
