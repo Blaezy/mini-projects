@@ -1,5 +1,5 @@
-* {
-  margin: 0;
+*{
+  box-sizing: border-box;
 }
 
 body {
@@ -57,14 +57,14 @@ body {
 
 .timeline-date {
   text-align: right;
-  width: 150px;
+  width: 160px;
   padding-top: 30px;
   padding-bottom: 30px;
   color: gray;
   padding-left: 15px;
 }
 .timeline-desc {
-  width: 500px;
+  flex: 1;
   padding: 30px 20px;
 }
 
@@ -95,8 +95,7 @@ body {
 }
 
 @media (max-width: 480px) {
-
-  .title-desc{
+  .title-desc {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -107,16 +106,24 @@ body {
     min-width: 0;
   }
 
+  .timeline-row {
+    gap: 15px;
+  }
+
   .timeline-date {
     flex-shrink: 0;
     width: 100px;
     padding: 30px 0 30px 10px;
   }
 
+  .timeline-desc{
+    padding: 30px 15px;
+  }
+
   .timeline-container::before {
-    left: 125px;
+    left: calc(100px + 15px);
   }
   .div-dot {
-    left: 118px;
+    left: calc(115px - 7px);
   }
 }
