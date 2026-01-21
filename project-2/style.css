@@ -4,6 +4,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .changelog {
@@ -90,4 +92,31 @@ body {
   font-size: 17px;
   margin-bottom: 50px;
   margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+
+  .title-desc{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .changelog {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .timeline-date {
+    flex-shrink: 0;
+    width: 100px;
+    padding: 30px 0 30px 10px;
+  }
+
+  .timeline-container::before {
+    left: 125px;
+  }
+  .div-dot {
+    left: 118px;
+  }
 }
