@@ -2,22 +2,52 @@
 <html>
   <head>
     <title>Redirect website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         text-align: center;
+        margin-top: 50px;
+        font-family: "Poppins", sans-serif;
       }
       button {
-        padding: 10px 30px;
-        font-weight: bold;
+        padding: 15px 40px;
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+        border-radius: 8px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+      p {
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+      @media (max-width: 480px) {
+        .main-container {
+          margin-top: 100px;
+        }
+        p {
+          font-size: 28px;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>Click the button to redirect to Project-1</h1>
-    <button class="js-redirect-button-project-1">Project-1</button>
+    <div class="main-container">
+      <p>Click the button to redirect to Project-1</p>
+      <button class="js-redirect-button-project-1">Project-1</button>
 
-    <h1>Click the button to redirect to Project-2</h1>
-    <button class="js-redirect-button-project-2">Project-2</button>
+      <p>Click the button to redirect to Project-2</p>
+      <button class="js-redirect-button-project-2">Project-2</button>
+    </div>
 
     <script>
       const buttonElementProject1 = document.querySelector(".js-redirect-button-project-1");
