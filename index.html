@@ -1,63 +1,113 @@
 <!doctype html>
 <html>
   <head>
-    <title>Redirect website</title>
+    <title>Mini Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
     <style>
-      body {
-        text-align: center;
-        margin-top: 50px;
-        font-family: "Poppins", sans-serif;
+      * {
+        box-sizing: border-box;
+        margin: 0;
       }
-      button {
-        padding: 15px 40px;
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f5f5f5;
+        color: #111;
+      }
+
+      .main-container {
+        max-width: 420px;
+        margin: 60px auto;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .mini-project-title {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 40px;
+      }
+
+      .project-card {
+        background-color: white;
+        border-radius: 14px;
+        padding: 24px;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .project-card p {
         font-size: 18px;
+        margin-bottom: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
         font-weight: 500;
         border: none;
-        border-radius: 8px;
+        border-radius: 10px;
         background-color: black;
         color: white;
         cursor: pointer;
+        transition: transform 0.15s, box-shadow 0.15s;
       }
-      p {
-        font-size: 28px;
-        font-weight: 500;
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
       }
 
       @media (max-width: 480px) {
         .main-container {
-          margin-top: 100px;
+          margin: 40px auto;
         }
-        p {
-          font-size: 28px;
+
+        .mini-project-title {
+          font-size: 32px;
         }
       }
     </style>
   </head>
+
   <body>
     <div class="main-container">
-      <p>Click the button to redirect to Project-1</p>
-      <button class="js-redirect-button-project-1">Project-1</button>
+      <p class="mini-project-title">Mini Projects</p>
+      <p class="subtitle">Small frontend experiments</p>
 
-      <p>Click the button to redirect to Project-2</p>
-      <button class="js-redirect-button-project-2">Project-2</button>
+      <div class="project-card">
+        <p>Project 1 - Personal portfolio</p>
+        <button class="js-redirect-button-project-1">Open Project</button>
+      </div>
+
+      <div class="project-card">
+        <p>Project 2 - Changelog Component</p>
+        <button class="js-redirect-button-project-2">Open Project</button>
+      </div>
     </div>
 
     <script>
       const buttonElementProject1 = document.querySelector(".js-redirect-button-project-1");
-
       buttonElementProject1.addEventListener("click", () => {
         window.open("project-1/index.html");
       });
 
       const buttonElementProject2 = document.querySelector(".js-redirect-button-project-2");
-
       buttonElementProject2.addEventListener("click", () => {
         window.open("project-2/index.html");
       });
