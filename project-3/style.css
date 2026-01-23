@@ -17,13 +17,25 @@ body {
 
 .testimonial-cards {
   display: flex;
-  max-width: 1500px;
+  max-width: 920px;
+  min-width: 340px;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
+  padding: 10px;
+  /* outline: 2px solid red; */
+  justify-content: center;
+  align-items: center;
+}
+.space {
+  /* outline: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-1 {
   max-width: 450px;
+  min-width: 360px;
   /* outline: solid 2px red; */
 }
 
@@ -33,7 +45,7 @@ body {
   font-size: 22px;
   padding: 20px 30px;
   margin: 10px;
-  border-radius: 22px;
+  border-radius: 30px;
   line-height: 1.5;
   margin-bottom: 20px;
   position: relative;
@@ -56,7 +68,6 @@ body {
 .user-info-card-2 {
   display: flex;
   align-items: center;
-  margin-left: 10px;
 }
 
 .user-info-img,
@@ -89,9 +100,9 @@ body {
 .card-2 {
   box-sizing: border-box;
   max-width: 450px;
+  min-width: 350px;
   border: solid 3px black;
   border-radius: 30px;
-  /* padding: 20px; */
 }
 .text-area-card-2 {
   font-size: 22px;
@@ -112,12 +123,13 @@ body {
 
 .card-3 {
   display: flex;
-  width: 920px;
-  margin-left: 10px;
+  max-width: 920px;
+  min-width: 340px;
 }
 
 .card-3-img-container {
-  width: 300px;
+  max-width: 360px;
+  min-width: 150px;
   height: 300px;
   margin-right: 20px;
   overflow: hidden;
@@ -132,7 +144,8 @@ body {
 }
 
 .card-3-details {
-  width: 600px;
+  max-width: 600px;
+  min-width: 190px;
   border: solid 3px black;
   padding: 40px;
   border-radius: 30px;
@@ -156,4 +169,88 @@ body {
   font-size: 20px;
 }
 
+/* here is the card-4 */
 
+.card-4 {
+  max-width: 920px;
+  min-width: 350px;
+  text-align: center;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  border: 3px solid black;
+  border-radius: 30px;
+}
+.card-4-comment {
+  font-size: 24px;
+  padding: 20px 40px 30px 40px;
+}
+
+.card-4-img-container {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-4-img-1,
+.card-4-img-2,
+.card-4-img-3 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 0 10px;
+}
+.card-4-img-1,
+.card-4-img-3 {
+  transform: scale(0.8);
+  opacity: 0.7;
+}
+
+.card-4-sign {
+  padding: 0 50px;
+  font-weight: bold;
+}
+.card-4-name {
+  font-size: 28px;
+}
+
+@media (max-width: 480px) {
+
+  .card-3 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid black;
+    border-radius: 30px;
+    background-color: black;
+    border-top-left-radius: 0;
+  }
+  .card-3-img-container {
+    max-width: 100%;
+    border-radius: 0;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  .card-3-img {
+    object-fit: fill;
+    object-position: center 0%;
+    transform: scale(1.3);
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .card-4-comment {
+    font-size: 18px;
+    padding: 0;
+  }
+  .card-4-img-1,
+  .card-4-img-2,
+  .card-4-img-3 {
+    padding: 0 5px;
+  }
+  .card-4-sign {
+    padding: 0 25px;
+  }
+  .card-4-name {
+    font-size: 22px;
+  }
+}
