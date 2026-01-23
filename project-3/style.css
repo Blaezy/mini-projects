@@ -11,6 +11,14 @@ body {
 .main-title {
   text-align: center;
   padding: 30px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.testimonial-cards {
+  display: flex;
+  max-width: 1500px;
+  gap: 20px;
 }
 
 .card-1 {
@@ -43,13 +51,14 @@ body {
   bottom: -15px;
 }
 
-.user-info {
+.user-info,.user-info-card-2 {
   display: flex;
   align-items: center;
   margin-left: 10px;
 }
 
-.user-info-img {
+.user-info-img,
+.user-info-img-card-2 {
   width: 100px;
   text-align: center;
 }
@@ -71,4 +80,26 @@ body {
 
 .user-role {
   font-size: 18px;
+}
+
+.card-2 {
+  box-sizing: border-box;
+  max-width: 450px;
+  border: solid 3px black;
+  border-radius: 20px;
+  /* padding: 20px; */
+}
+.text-area-card-2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 10px;
+  border-radius: 22px;
+  line-height: 1.5;
+  padding: 20px;
+}
+.user-info-card-2{
+  padding: 0px 20px 5px 20px;
+}
+.user-info-img-card-2 {
+  text-align: left;
 }
