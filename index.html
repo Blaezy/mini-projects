@@ -91,34 +91,31 @@
 
       <div class="project-card">
         <p>Project 1 - Personal portfolio</p>
-        <button class="js-redirect-button-project-1">Open Project</button>
+        <button class="js-redirect-button-project" data-project="1">Open Project</button>
       </div>
 
       <div class="project-card">
         <p>Project 2 - Changelog Component</p>
-        <button class="js-redirect-button-project-2">Open Project</button>
+        <button class="js-redirect-button-project" data-project="2">Open Project</button>
       </div>
 
       <div class="project-card">
         <p>Project 3 - Testimonial Cards</p>
-        <button class="js-redirect-button-project-3">Open Project</button>
+        <button class="js-redirect-button-project" data-project="3">Open Project</button>
+      </div>
+
+      <div class="project-card">
+        <p>Project 4 - Datepicker UI</p>
+        <button class="js-redirect-button-project" data-project="4">Open Project</button>
       </div>
     </div>
 
     <script>
-      const buttonElementProject1 = document.querySelector(".js-redirect-button-project-1");
-      buttonElementProject1.addEventListener("click", () => {
-        window.open("project-1/index.html");
-      });
-
-      const buttonElementProject2 = document.querySelector(".js-redirect-button-project-2");
-      buttonElementProject2.addEventListener("click", () => {
-        window.open("project-2/index.html");
-      });
-
-      const buttonElementProject3 = document.querySelector(".js-redirect-button-project-3");
-      buttonElementProject3.addEventListener("click", () => {
-        window.open("project-3/index.html");
+      document.querySelectorAll(".js-redirect-button-project").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const num = btn.dataset.project;
+          window.open(`project-${num}/index.html`);
+        });
       });
     </script>
   </body>
