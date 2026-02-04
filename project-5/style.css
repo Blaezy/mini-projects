@@ -1,4 +1,41 @@
-*{
+* {
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin-top: 50px;
+}
+
+.Profile-form{
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  border: black 3px solid;
+  border-radius: 30px;
+  padding: 50px;
+  gap: 50px;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 10px;
+  flex: 1;
+}
+
+.profile-section label {
+  font-size: 22px;
+}
+.profile-section input {
+  font-size: 20px;
+  border-radius:10px;
+  padding: 10px;
+}
+
+.already-taken-email{
+  color: rgb(236, 0, 0);
+  margin-bottom: 10px;
 }
