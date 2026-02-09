@@ -8,34 +8,165 @@ body {
   margin-top: 50px;
 }
 
-.Profile-form{
-  max-width: 800px;
+.Profile-form {
+  max-width: 600px;
   margin: auto;
   display: flex;
   border: black 3px solid;
   border-radius: 30px;
   padding: 50px;
-  gap: 50px;
 }
 
 .profile-section {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  gap: 10px;
+  width: 300px;
+  gap: 20px;
   flex: 1;
+  margin-right: 50px;
 }
 
 .profile-section label {
   font-size: 22px;
 }
 .profile-section input {
+  width: 100%;
   font-size: 20px;
-  border-radius:10px;
+  border-radius: 10px;
   padding: 10px;
+  border: 3px solid black;
+  box-sizing: border-box;
+}
+.profile-section input[type="password"] {
+  padding-right: 48px;
 }
 
-.already-taken-email{
+.already-taken-email,
+.error {
+  font-size: 15px;
   color: rgb(236, 0, 0);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.update-button {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.update-button:active {
+  transform: scale(0.9);
+}
+
+.enter-password-wrap,
+.cnf-password-wrap {
+  position: relative;
+}
+
+.open-eye-button,
+.cnf-open-eye-button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  bottom: 6px;
+  right: 12px;
+  cursor: pointer;
+}
+.cnf-open-eye-button {
+  bottom: 30px;
+}
+.password-open-eye,
+.cnf-password-open-eye,
+.password-close-eye {
+  width: 30px;
+  height: 30px;
+}
+
+.password-open-eye,
+.cnf-password-open-eye {
+  display: inline-block;
+}
+
+.password-close-eye {
+  display: none;
+}
+
+.error {
+  /* display: none; */
+  font-size: 15px;
+  color: rgb(236, 0, 0);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* here are the progress section  */
+
+.profile-progress-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.percentage-card {
+  width: auto;
+  height: 160px;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.progress-ring {
+  transform: rotate(-90deg);
+}
+.ring-background {
+  fill: none;
+  stroke: #e5e5e5;
+  stroke-width: 8;
+}
+.ring-progress {
+  fill: none;
+  stroke: #000;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 389.55748904513433;
+  stroke-dashoffset: 389.55748904513433;
+  transition: stroke-dashoffset 0.4s ease;
+}
+.progress-text {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profile-completeness {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.completion-list {
+  background-color: #dfdfdf;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  padding: 25px;
+  padding-right: 10px;
+  border-radius: 30px;
+  flex: 1;
+}
+
+.first-line,
+.second-line,
+.third-line {
+  color: gray;
+  text-decoration: line-through;
 }
