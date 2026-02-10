@@ -41,8 +41,61 @@ function passwordEye(eyeOpenClass, eyeCloseClass, inputClass) {
   }
 }
 
+function isPasswordMatch() {
+  const enterPasswordElement = document.querySelector(".input-password");
+  const cnfPasswordElement = document.querySelector(".cnf-input-password");
+  const errorElement = document.querySelector(".error");
 
-// function isPasswordMatch(){
-//   const enterPassword = document.querySelector('.input-password');
+  const firstPassword = enterPasswordElement.value;
+  const secondPassword = cnfPasswordElement.value;
 
-// }
+  if (firstPassword === "" && secondPassword === "") {
+    console.log("password is empty");
+    errorElement.textContent = "Enter the password";
+    errorElement.style.opacity = 1;
+    enterPasswordElement.style.borderColor = "red";
+    cnfPasswordElement.style.borderColor = "red";
+    return false;
+  } else if (firstPassword === secondPassword) {
+    console.log("password is equal");
+    errorElement.style.opacity = 0;
+    enterPasswordElement.style.borderColor = "black";
+    cnfPasswordElement.style.borderColor = "black";
+    return true;
+  } else {
+    console.log("password is not equal");
+    errorElement.textContent = "Passwords do not match";
+    errorElement.style.opacity = 1;
+    enterPasswordElement.style.borderColor = "red";
+    cnfPasswordElement.style.borderColor = "red";
+    return false;
+  }
+}
+
+const emailInput = document.getElementById("email");
+const emailError = document.querySelector(".valid-email");
+
+const updateButtonElement = document.querySelector(".js-update-button");
+updateButtonElement.addEventListener("click", () => {
+  isPasswordMatch();
+  checkEmailFormat();
+});
+
+// info: this is the email format cheker
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function checkEmailFormat() {
+  const email = emailInput.value.trim();
+
+  if (!isValidEmail(email)) {
+    emailError.style.opacity = 1;
+    emailInput.style.borderColor = "red";
+    return false;
+  } else {
+    emailError.style.opacity = 0;
+    emailInput.style.borderColor = "black";
+    return true;
+  }
+}
