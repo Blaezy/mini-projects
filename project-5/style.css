@@ -42,6 +42,10 @@ body {
   padding: 10px 48px 10px 10px;
 }
 
+.profile-section input:focus {
+  outline: none;
+}
+
 .valid-email {
   opacity: 0;
   font-size: 15px;
@@ -164,9 +168,7 @@ body {
   flex: 1;
 }
 
-.first-line,
-.second-line,
-.third-line {
+.completed-line{
   color: gray;
   text-decoration: line-through;
 }
