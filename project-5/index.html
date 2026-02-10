@@ -28,8 +28,8 @@
 
         <div class="enter-password-wrap">
           <label for="password">Enter Password</label>
-          <input type="password" id="password" placeholder="xxxxxxxx" />
-          <button class="open-eye-button">
+          <input class="input-password" type="password" id="password" placeholder="xxxxxxxx" />
+          <button class="open-eye-button js-open-eye-button">
             <img class="password-open-eye" src="/images/eye.png" alt="eye" />
             <img class="password-close-eye" src="/images/hidden_eye.png" alt="hidden_eye" />
           </button>
@@ -37,10 +37,10 @@
 
         <div class="cnf-password-wrap">
           <label for="cnfPassword">Confirm Password</label>
-          <input type="password" id="cnfPassword" placeholder="xxxxxxxx" />
-          <button class="cnf-open-eye-button">
+          <input class="cnf-input-password" type="password" id="cnfPassword" placeholder="xxxxxxxx" />
+          <button class="cnf-open-eye-button js-cnf-open-eye-button">
             <img class="cnf-password-open-eye" src="/images/eye.png" alt="hidden_eye" />
-            <img class="password-close-eye" src="/images/hidden_eye.png" alt="hidden_eye" />
+            <img class="cnf-password-close-eye" src="/images/hidden_eye.png" alt="hidden_eye" />
           </button>
           <span class="error">Passwords do not match</span>
         </div>
@@ -67,17 +67,6 @@
       </div>
     </div>
 
-    <script>
-      const progress = 60;
-      const circle = document.querySelector(".ring-progress");
-      const radius = 62;
-      const circumference = 2 * Math.PI * radius;
-      console.log(circumference);
-
-      circle.style.strokeDasharray = `${circumference}`;
-      requestAnimationFrame(() => {
-        circle.style.strokeDashoffset = circumference * (1 - progress / 100);
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

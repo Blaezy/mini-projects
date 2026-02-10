@@ -41,8 +41,8 @@ body {
   padding-right: 48px;
 }
 
-.already-taken-email,
-.error {
+.already-taken-email {
+  display: none;
   font-size: 15px;
   color: rgb(236, 0, 0);
   margin-bottom: 20px;
@@ -84,7 +84,8 @@ body {
 }
 .password-open-eye,
 .cnf-password-open-eye,
-.password-close-eye {
+.password-close-eye,
+.cnf-password-close-eye {
   width: 30px;
   height: 30px;
 }
@@ -94,7 +95,7 @@ body {
   display: inline-block;
 }
 
-.password-close-eye {
+.password-close-eye,.cnf-password-close-eye {
   display: none;
 }
 
