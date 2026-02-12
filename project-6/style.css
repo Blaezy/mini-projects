@@ -1,0 +1,35 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.project-title{
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-grid-layout{
+  width: 950px;
+  display: grid;
+  grid-template-columns: 310px 310px 310px;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 20px auto;
+}
+
+.layout-1, .layout-2, .layout-3{
+  margin: 0 5px;
+}
+
+.layout-1 img, .layout-2 img, .layout-3 img{
+  width: 300px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
