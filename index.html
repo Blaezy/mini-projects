@@ -22,7 +22,7 @@
 
       .main-container {
         max-width: 420px;
-        margin: 30px auto;
+        margin: 0px auto;
         padding: 30px 20px;
         text-align: center;
       }
@@ -36,7 +36,7 @@
       .subtitle {
         font-size: 16px;
         color: #666;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
       }
 
       .project-card {
@@ -72,13 +72,26 @@
         box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
       }
 
+      .all-projects {
+        display: grid;
+        max-width: 760px;
+        min-width: 360px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        box-sizing: border-box;
+        padding: 10px;
+      }
+
       @media (max-width: 480px) {
-        .main-container {
-          margin: 40px auto;
-        }
 
         .mini-project-title {
           font-size: 32px;
+        }
+
+        .all-projects{
+          width: 360px;
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -88,7 +101,9 @@
     <div class="main-container">
       <p class="mini-project-title">Mini Projects</p>
       <p class="subtitle">Small frontend experiments</p>
+    </div>
 
+    <div class="all-projects">
       <div class="project-card">
         <p>Project 1 - Personal portfolio</p>
         <button class="js-redirect-button-project" data-project="1">Open Project</button>
@@ -112,6 +127,11 @@
       <div class="project-card">
         <p>Project 5 - Accessible Form</p>
         <button class="js-redirect-button-project" data-project="5">Open Project</button>
+      </div>
+
+      <div class="project-card">
+        <p>Project 6 - Image Grid Layout</p>
+        <button class="js-redirect-button-project" data-project="6">Open Project</button>
       </div>
     </div>
 
