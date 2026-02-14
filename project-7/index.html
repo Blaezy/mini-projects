@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip UI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p class="page-title">Tooltip UI</p>
+
+    <div class="tooltip-ui">
+      <div class="home-title">Home
+        <span class="home-tooltip">Nothing nice in this home</span>
+      </div>
+      
+      <div class="project-title js-project-title">Projects
+        <span class="project-tooltip">Here all the project I have built</span>
+      </div>
+
+      <div class="blog-title">Blog
+        <span class="blog-tooltip">I don't write any blogs</span>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const projectPage = document.querySelector('.js-project-title');
+    projectPage.addEventListener('click',()=>{
+      window.open('../index.html');
+    })
+  </script>
+</html>

@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px;
+  margin-bottom: 100px;
+}
+
+.tooltip-ui {
+  max-width: 300px;
+  width: 100%;
+  min-width: 0;
+  margin: auto;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.home-title,
+.project-title,
+.blog-title {
+  position: relative;
+  cursor: pointer;
+}
+
+.home-title:hover .home-tooltip {
+  opacity: 1;
+  transform: translate(-130px, -55px);
+  pointer-events: auto;
+}
+.project-title:hover .project-tooltip {
+  opacity: 1;
+  transform: translate(-155px, -55px);
+  pointer-events: auto;
+}
+.blog-title:hover .blog-tooltip {
+  opacity: 1;
+  transform: translate(-110px, -55px);
+  pointer-events: auto;
+}
+
+.home-tooltip,
+.project-tooltip,
+.blog-tooltip {
+  opacity: 0;
+  background-color: black;
+  color: white;
+  position: absolute;
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  pointer-events: none;
+  transform: translate(-130px, -40px);
+  transition: transform 0.05s ease;
+}
+
+.project-tooltip {
+  transform: translate(-155px, -40px);
+}
+.blog-tooltip {
+  transform: translate(-110px, -40px);
+}
+
+.home-tooltip::after,
+.project-tooltip::after,
+.blog-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid black;
+}
+
+@media (max-width: 460px) {
+  .tooltip-ui {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  .tooltip-ui div span {
+    font-size: 14px;
+  }
+
+  .home-title:hover .home-tooltip,
+  .blog-title:hover .blog-tooltip {
+    transform: translate(-63%, -50px);
+  }
+  .project-title:hover .project-tooltip {
+    transform: translate(-65%, -50px);
+  }
+
+  .home-tooltip,
+  .blog-tooltip {
+    transform: translate(-63%, -40px);
+  }
+  .project-tooltip {
+    transform: translate(-65%, -40px);
+  }
+}
