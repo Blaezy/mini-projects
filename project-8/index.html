@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Tabs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p class="project-title">Simple Tabs</p>
+
+    <div class="tabs">
+      <div class="tab-list">
+        <button class="tab" data-tab="first">First Tab</button>
+        <button class="tab" data-tab="second">Second Tab</button>
+        <button class="tab" data-tab="third">Third Tab</button>
+        <button class="tab" data-tab="fourth">Fourth Tab</button>
+      </div>
+      <div class="content first-content">
+        <p>
+          Clicking each tab should hide the content of the other tab and show the content of clicked tab. By
+          default, enable the first tab.
+        </p>
+        <p class="tab-content">First Tab content to be displayed here.</p>
+        <p>Add some dummy content or just add a simple text showing the tab</p>
+      </div>
+
+      <div class="content second-content">
+        <p>
+          When a tab is clicked, the currently visible content is hidden and only the related section is shown. This
+          keeps the interface clean and avoids loading unnecessary information at once.
+        </p>
+        <p class="tab-content">Second Tab content to be displayed here.</p>
+        <p>This section explains how the tab system works internally.</p>
+      </div>
+      <div class="content third-content">
+        <p>
+          On smaller screens, the layout adapts to remain readable and usable without breaking the structure. The goal
+          is clarity and usability across all device sizes.
+        </p>
+        <p class="tab-content">Third Tab content to be displayed here.</p>
+        <p>This tab demonstrates how responsive design affects layout and interaction.</p>
+      </div>
+      <div class="content fourth-content">
+        <p>
+          You can use it to display settings, notes, or any secondary information. Keeping extra content in tabs helps
+          reduce visual clutter.
+        </p>
+        <p class="tab-content">Fourth Tab content to be displayed here.</p>
+        <p>This section is reserved for future enhancements or additional features.</p>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
