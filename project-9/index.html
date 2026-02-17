@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cookie consent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="nav-left">
+        <img class="profile-img skeleton" />
+        <span class="portfolio-name skeleton"></span>
+      </div>
+
+      <nav class="nav-right">
+        <span class="nav-item skeleton"></span>
+        <span class="nav-item skeleton"></span>
+        <span class="nav-item skeleton"></span>
+        <span class="nav-item skeleton"></span>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1 class="hero-title skeleton"></h1>
+      <p class="hero-desc skeleton"></p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+      <!-- PROJECTS -->
+      <section class="column">
+        <h2 class="section-title skeleton"></h2>
+        <ul class="list">
+          <li class="skeleton"></li>
+          <li class="skeleton"></li>
+          <li class="skeleton"></li>
+          <li class="skeleton"></li>
+          <li class="skeleton"></li>
+        </ul>
+      </section>
+
+      <!-- WORK -->
+      <section class="column wide">
+        <h2 class="section-title skeleton"></h2>
+
+        <article class="work">
+          <p class="skeleton w-title"></p>
+          <p class="skeleton w-info"></p>
+          <p class="skeleton w-link"></p>
+        </article>
+
+        <article class="work">
+          <p class="skeleton w-title"></p>
+          <p class="skeleton w-info"></p>
+          <p class="skeleton w-link"></p>
+        </article>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="column">
+        <h2 class="section-title skeleton"></h2>
+        <p class="skeleton text"></p>
+        <p class="skeleton text wide"></p>
+
+        <h3 class="sub-title skeleton"></h3>
+        <ul class="list">
+          <li class="skeleton"></li>
+          <li class="skeleton"></li>
+          <li class="skeleton"></li>
+          <li class="skeleton"></li>
+          <li class="skeleton"></li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- REVIEWS -->
+    <section class="reviews">
+      <h2 class="section-title skeleton"></h2>
+      <div class="review-list">
+        <div class="review skeleton"></div>
+        <div class="review skeleton"></div>
+        <div class="review skeleton"></div>
+      </div>
+    </section>
+
+    <div class="cookie-card js-cookie-card">
+      <img class="cookie-img" src="cookie.png" alt="cookie" />
+      <span class="close js-cookie-button-close">✕</span>
+
+      <div class="book-info">
+        <p class="cookie-title">We use Cookies to improve your user experience.</p>
+        <button class="cookie-button js-cookie-button-close">I like Cookies</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const cookieCard = document.querySelector(".js-cookie-card");
+    const cookieButton = document.querySelectorAll(".js-cookie-button-close");
+
+    let isCookie = JSON.parse(localStorage.getItem("cookie")) ?? true;
+
+    setTimeout(() => {
+      if (isCookie) {
+        cookieCard.style.transform = "translate(0,0)";
+        isCookie = false
+        localStorage.setItem("cookie", JSON.stringify(isCookie));
+      }
+    }, 3000);
+
+    cookieButton.forEach((button) => {
+      button.addEventListener("click", () => {
+        cookieCard.style.display = "none";
+      });
+    });
+  </script>
+</html>

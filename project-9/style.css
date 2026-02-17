@@ -1,0 +1,350 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+/* SKELETON */
+.skeleton {
+  background: #e2e5e7;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+  background-size: 40px 100%;
+  background-repeat: no-repeat;
+  animation: shimmer 1s infinite;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: right -40px top 0;
+  }
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.portfolio-name {
+  width: 100px;
+  height: 20px;
+}
+
+.nav-item {
+  width: 60px;
+  height: 20px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.hero-title {
+  width: 400px;
+  height: 50px;
+  margin: 0 auto 10px;
+}
+
+.hero-desc {
+  width: 220px;
+  height: 25px;
+  margin: 0 auto;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  gap: 50px;
+  padding: 0 100px;
+}
+
+.column {
+  flex: 1;
+}
+
+.column.wide {
+  flex: 1.5;
+}
+
+.section-title {
+  width: 120px;
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+/* LIST */
+.list {
+  list-style: none;
+}
+
+.list li {
+  width: 70%;
+  height: 15px;
+  margin-bottom: 8px;
+}
+
+/* WORK */
+.work {
+  margin-bottom: 25px;
+}
+
+.w-title {
+  width: 40%;
+  height: 15px;
+  margin-bottom: 5px;
+}
+
+.w-info {
+  width: 70%;
+  height: 15px;
+  margin-bottom: 5px;
+}
+
+.w-link {
+  width: 50%;
+  height: 15px;
+}
+
+/* TEXT */
+.text {
+  width: 60%;
+  height: 15px;
+  margin-bottom: 6px;
+}
+
+.text.wide {
+  width: 80%;
+}
+
+/* REVIEWS */
+.reviews {
+  padding: 80px 100px;
+}
+
+.review-list {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.review {
+  width: 300px;
+  height: 80px;
+  border-radius: 15px;
+}
+
+/* here are the cookies card  */
+
+.cookie-card {
+  position: fixed;
+  width: 300px;
+  padding: 24px;
+  border-radius: 20px;
+  background: #000;
+  color: #fff;
+
+  bottom: 24px;
+  right: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  transform: translate(400px,0);
+  transition: transform 0.15s ease;
+}
+
+
+.cookie-img {
+  width: 60px;
+  margin-bottom: 60px;
+  transform: scaleX(-1);
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cookie-title {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.cookie-button {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform .15s ease;
+}
+.cookie-button:active{
+  transform: scale(0.95);
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* =========================
+   MOBILE FIRST FIX (<= 768px)
+   ========================= */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav-item {
+    width: 50px;
+    height: 16px;
+  }
+
+  /* HERO */
+  .hero {
+    margin: 40px 0;
+    padding: 0 20px;
+  }
+
+  .hero-title {
+    width: 100%;
+    max-width: 280px;
+    height: 40px;
+  }
+
+  .hero-desc {
+    width: 70%;
+    height: 20px;
+  }
+
+  /* MAIN CONTENT */
+  .content {
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .column,
+  .column.wide {
+    flex: 1;
+  }
+
+  .section-title {
+    width: 100px;
+    height: 22px;
+  }
+
+  /* LISTS */
+  .list li {
+    width: 90%;
+  }
+
+  /* WORK BLOCK */
+  .w-title {
+    width: 60%;
+  }
+
+  .w-info {
+    width: 85%;
+  }
+
+  .w-link {
+    width: 65%;
+  }
+
+  /* TEXT */
+  .text {
+    width: 90%;
+  }
+
+  .text.wide {
+    width: 100%;
+  }
+
+  /* REVIEWS */
+  .reviews {
+    padding: 40px 20px;
+  }
+
+  .review {
+    width: 100%;
+    max-width: 320px;
+    height: 70px;
+    margin: 0 auto;
+  }
+}
+
+/* =========================
+   SMALL PHONES (<= 480px)
+   ========================= */
+@media (max-width: 480px) {
+  .profile-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .portfolio-name {
+    width: 80px;
+    height: 16px;
+  }
+
+  .hero-title {
+    height: 34px;
+  }
+
+  .hero-desc {
+    width: 80%;
+  }
+
+  .section-title {
+    width: 90px;
+  }
+
+  .review {
+    height: 60px;
+  }
+  .review-list {
+    flex-direction: column;
+  }
+  .content {
+    flex-direction: column;
+  }
+}
