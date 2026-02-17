@@ -105,14 +105,14 @@
     setTimeout(() => {
       if (isCookie) {
         cookieCard.style.transform = "translate(0,0)";
-        isCookie = false
-        localStorage.setItem("cookie", JSON.stringify(isCookie));
       }
     }, 3000);
 
     cookieButton.forEach((button) => {
       button.addEventListener("click", () => {
         cookieCard.style.display = "none";
+        isCookie = false;
+        localStorage.setItem("cookie", JSON.stringify(isCookie));
       });
     });
   </script>
