@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restricted Textarea</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Restricted Textarea</h1>
+    <div class="main-area">
+      <textarea class="input-area" placeholder="start typing..." maxlength="250"></textarea>
+      <span class="text-limit">0/250</span>
+    </div>
+    <div class="btn-wrap">
+      <button class="js-button">Submit</button>
+    </div>
+  </body>
+  <script>
+    const mainAreaElement = document.querySelector('.main-area');
+    const textareaElement = document.querySelector('.input-area');
+    const buttonElement = document.querySelector(".js-button")
+
+    buttonElement.addEventListener('click',()=>{
+      console.log(textareaElement.value.length);
+
+    })
+
+    
+  </script>
+</html>
