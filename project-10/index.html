@@ -13,19 +13,33 @@
       <span class="text-limit">0/250</span>
     </div>
     <div class="btn-wrap">
-      <button class="js-button">Submit</button>
+      <button class="js-button" type="submit">Submit</button>
     </div>
   </body>
   <script>
-    const mainAreaElement = document.querySelector('.main-area');
-    const textareaElement = document.querySelector('.input-area');
-    const buttonElement = document.querySelector(".js-button")
+    const mainAreaElement = document.querySelector(".main-area");
+    const textareaElement = document.querySelector(".input-area");
+    const butt = document.querySelector(".js-button");
+    const updateText = document.querySelector(".text-limit");
 
-    buttonElement.addEventListener('click',()=>{
-      console.log(textareaElement.value.length);
-
-    })
-
-    
+    textareaElement.addEventListener("input", () => {
+      let ass = textareaElement.value.length;
+      updateText.innerHTML = `${ass}/250`;
+      if (ass >= 250) {
+        textareaElement.style.borderColor = "red";
+        textareaElement.style.color = "red";
+        updateText.style.color = "red";
+      } else {
+        textareaElement.style.borderColor = "black";
+        textareaElement.style.color = "black";
+        updateText.style.color = "black";
+      }
+    });
+    butt.addEventListener("click", () => {
+      textareaElement.value = "";
+      textareaElement.style.borderColor = "black";
+      textareaElement.style.color = "black";
+      updateText.style.color = "black";
+    });
   </script>
 </html>
