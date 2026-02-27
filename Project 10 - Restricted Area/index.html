@@ -16,30 +16,5 @@
       <button class="js-button" type="submit">Submit</button>
     </div>
   </body>
-  <script>
-    const mainAreaElement = document.querySelector(".main-area");
-    const textareaElement = document.querySelector(".input-area");
-    const butt = document.querySelector(".js-button");
-    const updateText = document.querySelector(".text-limit");
-
-    textareaElement.addEventListener("input", () => {
-      let ass = textareaElement.value.length;
-      updateText.innerHTML = `${ass}/250`;
-      if (ass >= 250) {
-        textareaElement.style.borderColor = "red";
-        textareaElement.style.color = "red";
-        updateText.style.color = "red";
-      } else {
-        textareaElement.style.borderColor = "black";
-        textareaElement.style.color = "black";
-        updateText.style.color = "black";
-      }
-    });
-    butt.addEventListener("click", () => {
-      textareaElement.value = "";
-      textareaElement.style.borderColor = "black";
-      textareaElement.style.color = "black";
-      updateText.style.color = "black";
-    });
-  </script>
+  <script src="script.js"></script>
 </html>

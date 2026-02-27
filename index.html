@@ -3,94 +3,7 @@
   <head>
     <title>Mini Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-      }
-
-      body {
-        font-family: ui-sans-serif, system-ui, sans-serif;
-        background-color: #f5f5f5;
-        color: #111;
-      }
-
-      .main-container {
-        max-width: 420px;
-        margin: 0px auto;
-        padding: 30px 20px;
-        text-align: center;
-      }
-
-      .mini-project-title {
-        font-size: 36px;
-        font-weight: 600;
-        margin-bottom: 10px;
-      }
-
-      .subtitle {
-        font-size: 16px;
-        color: #666;
-        margin-bottom: 20px;
-      }
-
-      .project-card {
-        background-color: white;
-        border-radius: 14px;
-        padding: 24px;
-        margin-bottom: 20px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      }
-
-      .project-card p {
-        font-size: 18px;
-        margin-bottom: 16px;
-        font-weight: 500;
-      }
-
-      button {
-        width: 100%;
-        padding: 14px;
-        font-size: 16px;
-        font-weight: 500;
-        border: none;
-        border-radius: 10px;
-        background-color: black;
-        color: white;
-        cursor: pointer;
-        transition:
-          transform 0.15s,
-          box-shadow 0.15s;
-      }
-
-      button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-      }
-
-      .all-projects {
-        display: grid;
-        max-width: 760px;
-        min-width: 360px;
-        margin: 0 auto;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        box-sizing: border-box;
-        padding: 10px;
-      }
-
-      @media (max-width: 480px) {
-
-        .mini-project-title {
-          font-size: 32px;
-        }
-
-        .all-projects{
-          width: 360px;
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -102,70 +15,83 @@
     <div class="all-projects">
       <div class="project-card">
         <p>Project 1 - Personal portfolio</p>
-        <button class="js-redirect-button-project" data-project="1">Open Project</button>
+        <button class="js-redirect-button-project" data-project="1" data-project-name="Personal portfolio">
+          Open Project
+        </button>
       </div>
 
       <div class="project-card">
         <p>Project 2 - Changelog Component</p>
-        <button class="js-redirect-button-project" data-project="2">Open Project</button>
+        <button class="js-redirect-button-project" data-project="2" data-project-name="Changelog Component">
+          Open Project
+        </button>
       </div>
 
       <div class="project-card">
         <p>Project 3 - Testimonial Cards</p>
-        <button class="js-redirect-button-project" data-project="3">Open Project</button>
+        <button class="js-redirect-button-project" data-project="3" data-project-name="Testimonial Cards">
+          Open Project
+        </button>
       </div>
 
       <div class="project-card">
         <p>Project 4 - Datepicker UI</p>
-        <button class="js-redirect-button-project" data-project="4">Open Project</button>
+        <button class="js-redirect-button-project" data-project="4" data-project-name="Datepicker UI">
+          Open Project
+        </button>
       </div>
 
       <div class="project-card">
         <p>Project 5 - Accessible Form</p>
-        <button class="js-redirect-button-project" data-project="5">Open Project</button>
+        <button class="js-redirect-button-project" data-project="5" data-project-name="Accessible Form">
+          Open Project
+        </button>
       </div>
 
       <div class="project-card">
         <p>Project 6 - Image Grid Layout</p>
-        <button class="js-redirect-button-project" data-project="6">Open Project</button>
+        <button class="js-redirect-button-project" data-project="6" data-project-name="Image Grid Layout">
+          Open Project
+        </button>
       </div>
       <div class="project-card">
         <p>Project 7 - Tooltip UI</p>
-        <button class="js-redirect-button-project" data-project="7">Open Project</button>
+        <button class="js-redirect-button-project" data-project="7" data-project-name="Tooltip UI">Open Project</button>
       </div>
 
       <div class="project-card">
         <p>Project 8 - Simple Tabs</p>
-        <button class="js-redirect-button-project" data-project="8">Open Project</button>
+        <button class="js-redirect-button-project" data-project="8" data-project-name="Simple Tabs">
+          Open Project
+        </button>
       </div>
 
       <div class="project-card">
         <p>Project 9 - Cookie Consent</p>
-        <button class="js-redirect-button-project" data-project="9">Open Project</button>
+        <button class="js-redirect-button-project" data-project="9" data-project-name="Cookie Consent">
+          Open Project
+        </button>
       </div>
 
       <div class="project-card">
         <p>Project 10 - Restricted Area</p>
-        <button class="js-redirect-button-project" data-project="10">Open Project</button>
+        <button class="js-redirect-button-project" data-project="10" data-project-name="Restricted Area">
+          Open Project
+        </button>
       </div>
 
       <div class="project-card">
         <p>Project 11 - Accordion</p>
-        <button class="js-redirect-button-project" data-project="11">Open Project</button>
+        <button class="js-redirect-button-project" data-project="11" data-project-name="Accordion">Open Project</button>
       </div>
       <div class="project-card">
         <p>Project 12 - Age Calculator</p>
-        <button class="js-redirect-button-project" data-project="12">Open Project</button>
+        <button class="js-redirect-button-project" data-project="12" data-project-name="Age Calculator">
+          Open Project
+        </button>
       </div>
     </div>
 
-    <script>
-      document.querySelectorAll(".js-redirect-button-project").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const num = btn.dataset.project;
-          window.open(`project-${num}/index.html`);
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

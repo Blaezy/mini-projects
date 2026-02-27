@@ -20,7 +20,7 @@ h1 {
 
 .input-area {
   width: 100%;
-  min-height: 100px;
+  min-height: 150px;
   padding: 10px;
   border: 3px solid black;
   border-radius: 15px;
@@ -32,6 +32,9 @@ h1 {
   resize: none;
   word-wrap: break-word;
   white-space: pre-wrap;
+
+  scrollbar-width: thin;
+  scrollbar-color: #0000003d transparent;
 }
 .input-area:focus {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
@@ -46,12 +49,12 @@ h1 {
   right: 10px;
 }
 
-.btn-wrap{
+.btn-wrap {
   display: flex;
   justify-content: center;
 }
 
-.btn-wrap button{
+.btn-wrap button {
   padding: 15px 50px;
   background-color: black;
   color: white;
@@ -61,10 +64,10 @@ h1 {
   border-radius: 10px;
   margin: 10px;
   cursor: pointer;
-  transition: transform .15s ease;
+  transition: transform 0.15s ease;
   border: none;
 }
 
-.btn-wrap button:active{
+.btn-wrap button:active {
   transform: scale(0.9);
 }
